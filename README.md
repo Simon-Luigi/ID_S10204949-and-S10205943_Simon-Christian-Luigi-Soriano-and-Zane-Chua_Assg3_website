@@ -1,10 +1,12 @@
 <h1>Shoptopia</h1>
 <h2>Project Details</h2>
-Group name : Hardstuck 3.5 GPA
-| Member id        | Name           | Student ID  |
-| ------------- |:-------------:| -----:|
-| 1 | Simon Christian Luigi Soriano| S10204949|
-| 2| Zane Chua| S1020594|
+Group name : Hardstuck 3.5 GPA<br />
+
+| Member id| Name          | Student ID |
+| -------- |:-------------:| -----:|
+| 1        | Simon Christian Luigi Soriano| S10204949|
+| 2        | Zane Chua | S10205943|
+
 Class: P01<br />
 
 <h2>Task details</h2>
