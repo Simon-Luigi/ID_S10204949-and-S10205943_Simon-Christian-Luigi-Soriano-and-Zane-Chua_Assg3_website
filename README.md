@@ -30,14 +30,9 @@ Class: P01<br />
 
 <h3>Technologies used</h3>
 
-* HTML 
-* CSS
-* Javascript
 
 <h3>APIs/Libraries used</h3>
 
-* Pokémon TCG API - https://api.pokemontcg.io
-* Bootstrap v4.5.3 - https://getbootstrap.com/
 
 <h3>Images used</h3>
 
