@@ -8,6 +8,7 @@ document.getElementById("Check").addEventListener("click", function() {
 });
 
 
+
 document.getElementById("Clear").addEventListener("click", function() {
   localStorage.clear();
   console.log("success");
