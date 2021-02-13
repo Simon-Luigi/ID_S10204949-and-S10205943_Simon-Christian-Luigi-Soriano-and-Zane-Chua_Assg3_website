@@ -1,0 +1,18 @@
+.spacer{
+  height: 250px;
+}
+
+
+.description {
+  border-color: red;
+}
+
+.description h1{
+  text-align: center;
+}
+
+.description h2{ 
+  font-size: 20px;
+  display:block;
+  text-align: center;
+}
