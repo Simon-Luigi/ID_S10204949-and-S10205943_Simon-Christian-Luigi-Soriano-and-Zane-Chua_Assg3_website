@@ -69,6 +69,11 @@
   top:5%;
   right:0;
 }
+.gachabtn{
+  position: fixed;
+  top:10%;
+  right:0;
+}
 
 .cointxt{
   position: fixed;
