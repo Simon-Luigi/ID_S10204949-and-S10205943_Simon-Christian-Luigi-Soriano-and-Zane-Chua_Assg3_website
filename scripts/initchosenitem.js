@@ -61,5 +61,4 @@ function DisplayItem(response) {
   $(".itemDesc").html(desc);
   $(".itemImage").attr("src", `${image}`);
   $(".itemImage").attr("alt", `${name}`);
-  
 }

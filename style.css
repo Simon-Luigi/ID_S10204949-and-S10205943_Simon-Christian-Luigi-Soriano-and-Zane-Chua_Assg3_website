@@ -16,3 +16,62 @@
   display:block;
   text-align: center;
 }
+
+.islandcontainer{
+  position: relative;
+}
+
+
+
+.align {
+  display: flex;
+  justify-content: center;
+}
+
+.separator{
+  height: 20em;
+}
+
+
+.uwuzon{
+  position: absolute;
+  top: -6%;
+  left: 30%;
+  width: 20%;
+  height: auto;
+}
+
+
+.ladzada{
+  position: absolute;
+  top: 700px;
+  left: 450px;
+}
+
+.abay{
+  position: absolute;
+  top: 400px;
+  left: 450px;
+}
+.souppee{
+  position: absolute;
+  top: 350px;
+  left: 900px;
+}
+
+
+.islandimg{
+  width:80%;
+}
+
+.cartbtn{
+  position: fixed;
+  top:5%;
+  right:0;
+}
+
+.cointxt{
+  position: fixed;
+  top:0;
+  right:0;
+}
