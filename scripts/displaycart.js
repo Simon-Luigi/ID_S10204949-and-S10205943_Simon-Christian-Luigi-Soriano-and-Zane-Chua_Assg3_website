@@ -3,10 +3,7 @@ $(document).ready(function () {
 })
 
 document.getElementById("Clear").addEventListener("click", function() {
-  var tokens = localStorage.getItem("Tokens");
-  localStorage.clear();
-  localStorage.setItem("Tokens", tokens)
-  window.location.reload();
+  ClearCart();
   console.log("success");
 });
 
@@ -16,8 +13,8 @@ function InitializeItems(){
   var total_items = 0;
   for ( var i = 0, len = localStorage.length; i < len; ++i ) {
     var key = JSON.parse(localStorage.getItem(localStorage.key(i)));
-    if (localStorage.key(i) !== "Tokens"){
-      var key = JSON.parse(localStorage.getItem(localStorage.key(i)));
+    var check = localStorage.key(i).includes("inventory");
+    if (localStorage.key(i) !== "Tokens" && check == false){
       var item_name = key.name;
       var item_qty = key.qty;
       var price = key.price;
@@ -34,15 +31,23 @@ function InitializeItems(){
     }
     else{
       var tokens = parseInt(localStorage.getItem("Tokens"));
-      localStorage.clear();
       var earnedtokens  = Math.floor(subtotal);
       var totaltokens = earnedtokens + tokens;
       localStorage.setItem("Tokens", totaltokens);
-      window.location.reload();
+      ClearCart();
       alert(`Successfully paid. Received ${earnedtokens} tokens. Total tokens = ${totaltokens}`);
     }
   });
   $("i").html(`${total_items}`)
   $(".total-price").html(`$${subtotal}`)
-  console.log("Success total")
+} 
+
+function ClearCart(){
+  for ( var i = 0, len = localStorage.length; i < len; ++i ){
+    var key = JSON.parse(localStorage.getItem(localStorage.key(i)));
+    if (key.isItem !== undefined){
+      localStorage.removeItem(localStorage.key(i));
+      window.location.reload();
+    }
+  }
 }

@@ -29,7 +29,8 @@ $(document).ready(function () {
         'id' : oldItem.id,
         'name': oldItem.name,
         'qty': oldQuantity + 1,
-        'price': oldItem.price
+        'price': oldItem.price,
+        'isItem' : "yes"
         }
         localStorage.setItem(`${response._id}`, JSON.stringify(newItems));
         console.log("Added 1 more of same item to cart");
@@ -39,7 +40,8 @@ $(document).ready(function () {
         'id' : response._id,
         'name': response.item_name,
         'qty': 1,
-        'price': response.price
+        'price': response.price,
+        'isItem': "yes"
       }
       localStorage.setItem(`${response._id}`, JSON.stringify(newItem))
       console.log("Added item to cart");
