@@ -41,9 +41,31 @@ There is a variety of features that have been "gamified" to make it visually and
 
 <h3>Technologies used</h3>
 
+* HTML 
+* CSS
+* Javascript
+
 
 <h3>APIs/Libraries used</h3>
 
+* Bootstrap v5.0.0 : https://getbootstrap.com/
+* RestDb : https://restdb.io/ 
+<h3>RestDb data used</h3>
+This is the list of websites that we have gathered the data to create our fake stores database from
+
+* Samsung galaxy s20 ultra cosmic grey : https://onlinestore.business.starhub.com/business/store/mobile/browse/samsung/galaxy-s20-ultra-5g.html#/VOICE/RECONTRACT
+* Samsung galaxy s20 ultra black : https://shopee.sg/Samsung-Galaxy-S20-ULTRA-i.267447552.7746970626
+* Apple products : https://www.apple.com/shop/
+* Secret lab chairs : https://secretlab.sg/
+* Furnitures : https://www.novena.com.sg/
+* Pokemon booster box sets : https://www.collectorscache.com/
+* Loose 36 booster packs : https://www.ebay.com/itm/Pokemon-TCG-Sword-and-Shield-36-Booster-Packs-/233744836124
+* Animal Crossing Booster packs : https://www.nintendo.com.au/
+* Dragon ball card packs : http://www.dbs-cardgame.com/
+* Nintendo products : https://www.nintendo.com/
+* Study desks: https ://kidshaven.sg/
+* Playstation products : https://www.sony.com.sg/
+* Xbox products : https://www.xbox.com/en-SG/
 
 <h3>Images used</h3>
 
