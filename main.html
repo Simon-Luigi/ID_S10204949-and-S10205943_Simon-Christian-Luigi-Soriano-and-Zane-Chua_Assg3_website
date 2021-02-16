@@ -8,10 +8,13 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="./styles/style.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
+  <body style="background-image: url(./images/skybg.png); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
+    <audio autoplay loop>
+    <source src="./sounds/OtherworldMysteriousPensiveGameMusicByHeatleyBros.mp3">
+    Your browser does not support the audio element.
+    </audio>
     <section>
-      <div class="separator">
-      </div>
+      <div class="separator"></div>
       <div class="align">
         <div class="islandcontainer">
           <img class ="islandimg" src="./images/island.png"></img>
@@ -21,8 +24,15 @@
             onmouseout="this.src='./images/uwuzon1.png';"
             onclick = "location.href='./chosenshop.html?shop=uwuzon'">
 
-          <img class="abay" src = "https://ir.ebaystatic.com/cr/v/c1/ebay-logo-1-1200x630-margin.png" onclick = "location.href='./chosenshop.html?shop=abay'" width = "100px" height = "100px">
-          <img class="ladzada" src = "https://dmx9040v9xyo8.cloudfront.net/uploads/2020/06/02FEB-Insights-Lazada-Service-Marketplace-MOST2414-Cover-1.jpg" onclick = "location.href='./chosenshop.html?shop=ladzada'" width = "100px" height = "100px">
+          <img class="abay" src = "./images/abay1.png" 
+          onmouseover="this.src='./images/abay2.png';"
+          onmouseout="this.src='./images/abay1.png';"
+          onclick = "location.href='./chosenshop.html?shop=abay'">
+
+          <img class="ladzada" src = "./images/ladzada1.png"
+          onmouseover="this.src='./images/ladzada2.png';"
+          onmouseout="this.src='./images/ladzada1.png';"
+          onclick = "location.href='./chosenshop.html?shop=ladzada'">
 
           <img class="souppee" src = "./images/souppee1.png" 
           onmouseover="this.src='./images/souppee2.png';"
