@@ -20,7 +20,7 @@ function InitializeItems(){
       var price = key.price;
       var total_price = item_qty * key.price;
       total_items += item_qty;
-      subtotal += total_price; 
+      subtotal += total_price;
       item = "<tr> + <td data-th = 'Product'> <div class = 'row'> <div class='col-md-6 text-left mt-sm-2'>" + `<h4>${item_name}</h4> </div> </div> </td> <td data-th = "Price">${price}</td> <td data-th = "Quantity">${item_qty}</td> <td data-th = "Total-Price">${total_price}</td> </tr>`;
       $(".chosenItems").append(item);
     }
@@ -34,8 +34,8 @@ function InitializeItems(){
       var earnedtokens  = Math.floor(subtotal);
       var totaltokens = earnedtokens + tokens;
       localStorage.setItem("Tokens", totaltokens);
-      ClearCart();
       alert(`Successfully paid. Received ${earnedtokens} tokens. Total tokens = ${totaltokens}`);
+      ClearCart();
     }
   });
   $("i").html(`${total_items}`)

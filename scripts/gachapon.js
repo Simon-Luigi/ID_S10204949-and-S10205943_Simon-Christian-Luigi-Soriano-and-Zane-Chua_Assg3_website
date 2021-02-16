@@ -35,7 +35,7 @@ function GachaSystem(tokens){
 function SpinPrize() {
   var prizes = [[60, "Basic Voucher"], [95, "Premium Voucher"], [100, "Super Voucher"]];
   var rand = Math.floor(Math.random() * 100) + 1; // 1-100
-  //60% basic voucher, 30% prem voucher, 5% super voucher
+  //60% basic voucher, 35% prem voucher, 5% super voucher
   if (rand < prizes[0][0]){
     return prizes[0][1];
   }
