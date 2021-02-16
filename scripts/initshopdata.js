@@ -6,15 +6,19 @@ const APIKEY = "600405bf1346a1524ff12b5e";
 $(document).ready(function () {
 
   if (chosenShop == "uwuzon"){
+    $(".shopname").attr("src", "./images/uwuzonname.png");
     GetUwuzonData();
   }
   else if (chosenShop == "abay"){
+    $(".shopname").attr("src", "./images/abayname.png");
     GetAbayData();
   }
   else if (chosenShop == "ladzada"){
+    $(".shopname").attr("src", "./images/ladzadaname.png");
     GetLadzadaData();
   }
   else if (chosenShop == "souppee"){
+    $(".shopname").attr("src", "./images/souppeename.png");
     GetSouppeeData();
   }
 })

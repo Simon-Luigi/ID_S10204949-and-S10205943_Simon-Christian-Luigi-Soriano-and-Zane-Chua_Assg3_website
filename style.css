@@ -21,9 +21,20 @@
 }
 
 .spacer{
-height: 20em;
+  height: 20em;
 }
 
+.spacer2{
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+
+.backgroundimage{
+  background-image: url(./images/skybg.png);
+  background-size: 100% 100%;
+}
 
 .description {
   border-color: red;
@@ -126,11 +137,12 @@ height: 20em;
   font-family: 'munroregular';
 }
 
-
+.backgroundcolor{
+  background-color: rgb(25, 38, 56);
+}
 
 .itemcontainer{
   display: flex;
-  background-color: red;
   margin-left: auto;
   margin-right: auto;
   width: 90%;
@@ -142,15 +154,28 @@ height: 20em;
 .itemcontainer > div {
   display: flex;
   justify-content: center;
-  background-color: #f1f1f1;
+  background-image: url(./images/border1.png);
+  background-size: 100% 100%;
   width: 30%;
-  min-width: 200px;
+  min-width: 232px;
+  max-width: 340px;
   margin: 1em;
+  padding: 3%;
+}
+
+.itemcontainer > div:hover {
+  background-image: url(./images/border2.png);
 }
 
 .itemimg{
-  background-color: rgba(0,0,0,0.2);
+  /* background-color: rgba(0,0,0,0.2); */
   width: 100%;
+  min-width: 200px;
+  min-height: 200px;
   height: auto;
+}
 
+.shopname{
+  width: 50%;
+  max-width: 500px;
 }
