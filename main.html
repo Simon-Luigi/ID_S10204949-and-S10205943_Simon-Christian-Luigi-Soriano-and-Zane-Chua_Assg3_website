@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width">
     <title>Main page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="./styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body style="background-image: url(./images/skybg.png); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
-    <audio autoplay loop>
+    <audio  loop>
     <source src="./sounds/OtherworldMysteriousPensiveGameMusicByHeatleyBros.mp3">
     Your browser does not support the audio element.
     </audio>
@@ -17,12 +17,12 @@
       <div class="separator"></div>
       <div class="align">
         <div class="islandcontainer">
-          <img class ="islandimg" src="./images/island.png"></img>
+          <img class ="islandimg" src="./images/island.png">
 
-            <img class="uwuzon" src = "./images/uwuzon1.png" 
-            onmouseover="this.src='./images/uwuzon2.png';"
-            onmouseout="this.src='./images/uwuzon1.png';"
-            onclick = "location.href='./chosenshop.html?shop=uwuzon'">
+          <img class="uwuzon" src = "./images/uwuzon1.png" 
+          onmouseover="this.src='./images/uwuzon2.png';"
+          onmouseout="this.src='./images/uwuzon1.png';"
+          onclick = "location.href='./chosenshop.html?shop=uwuzon'">
 
           <img class="abay" src = "./images/abay1.png" 
           onmouseover="this.src='./images/abay2.png';"
@@ -38,12 +38,15 @@
           onmouseover="this.src='./images/souppee2.png';"
           onmouseout="this.src='./images/souppee1.png';"
           onclick = "location.href='./chosenshop.html?shop=souppee'">
-
-
-          <div class="cointxt">Tokens : <i>x</i></div>
-          <button class="cartbtn" onclick = "location.href='./shoppingcart.html'">Go check cart kek</button>
-          <button class="gachabtn" onclick = "location.href='./gachapon.html'">Gachapon machine</button>
         </div>
+        <div class="tokencontainer">
+          <img class="tokenimg" src="./images/tokenbig1.png">
+          <div class="cointxt">x</div>
+        </div>
+          <br></br>
+          
+        <!-- <button class="cartbtn" onclick = "location.href='./shoppingcart.html'">Go check cart kek</button>
+        <button class="gachabtn" onclick = "location.href='./gachapon.html'">Gachapon machine</button> -->
       </div>
     <section>
     <script src="/scripts/maincode.js"></script>

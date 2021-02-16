@@ -4,5 +4,5 @@ $(document).ready(function () {
 
 function InitializeTokens(){
   var tokens = localStorage.getItem("Tokens");
-  $("i").html(`${tokens}`);
+  $(".cointxt").html(`${tokens}`);
 }

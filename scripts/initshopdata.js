@@ -102,9 +102,9 @@ function InitData(response){
     categories.push(response[i].category);
     var itemImage = "https://interactivedev-ec04.restdb.io/media/" + response[i].item_image[0];
     var itemId = response[i]._id;
-    itemData = `<div onclick = "location.href='./chosenitem.html?item=${chosenShop}/${itemId}'">` + `<img src = "${itemImage}">` + "</div>";
-    $("#Categories").append(itemData);
-    console.log(itemImage);
+    itemData = `<div><img class="itemimg" src = "${itemImage}" onclick = "location.href='./chosenitem.html?item=${chosenShop}/${itemId}'"></div>`;
+    $(".itemcontainer").append(itemData);
+    console.log(itemData);
   }
   var uniqueCategories = categories.filter((v, i, a) => a.indexOf(v) === i);
   console.log(uniqueCategories)
