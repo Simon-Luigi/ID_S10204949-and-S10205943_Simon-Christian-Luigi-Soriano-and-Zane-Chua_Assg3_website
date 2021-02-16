@@ -3,15 +3,6 @@
   50% {height: 14em;}
   100% {height: 10em;}
 }
-
-@keyframes token{
-  0% {src: url('./images/token1.png');}
-  25% {src: url('./images/token2.png');}
-  50% {src: url('./images/token3.png');}
-  75% {src: url('./images/token4.png');}
-  100% {src: url('./images/token5.png');}
-}
-
 @font-face {
     font-family: 'munroregular';
     src: url('./fonts/munro-webfont.woff2') format('woff2'),
@@ -21,7 +12,7 @@
 }
 
 .spacer{
-  height: 20em;
+  margin-top: 10%;
 }
 
 .spacer2{
@@ -31,23 +22,41 @@
   margin-bottom: 3%;
 }
 
+body{
+
+  height: 100%;
+}
+
+.backgroundexpander{
+  height: 500px;
+}
+
 .backgroundimage{
   background-image: url(./images/skybg.png);
+  background-repeat: no-repeat;
   background-size: 100% 100%;
+  background-position: center;
 }
 
-.description {
+.logoimage{
+  width: 30%;
+}
+
+.align {
   border-color: red;
+  display: flex;
+  justify-content: center;
 }
 
-.description h1{
-  text-align: center;
+.description{
+  font-family: 'munroregular';
+  font-size: 300%;
+  font-style: bold;
+  color: white;
 }
 
-.description h2{ 
-  font-size: 20px;
-  display: block;
-  text-align: center;
+.home{
+    text-decoration: none;
 }
 
 .islandcontainer{
@@ -159,6 +168,8 @@
   width: 30%;
   min-width: 232px;
   max-width: 340px;
+  max-height: 340px;
+  height: auto;
   margin: 1em;
   padding: 3%;
 }
