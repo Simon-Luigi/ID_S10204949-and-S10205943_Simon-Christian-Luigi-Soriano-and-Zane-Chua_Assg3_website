@@ -8,22 +8,22 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="/style.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
+  <body class="backgroundcolor">
     <section class="pt-5 pb-5">
       <div class="container">
         <div class="row w-100">
-            <div class="col-lg-12 col-md-12 col-12">
+            <div class="col-lg-12 col-md-12 col-12, cartfont">
                 <h3 class="display-5 mb-2 text-center">Shopping Cart</h3>
                 <p class="mb-5 text-center">
                     <i class="totalItems text-info font-weight-bold">X</i> items in your cart</p>
-                <table id="shoppingCart" class="table table-condensed table-responsive">
+                <table id="shoppingCart" class="table table-condensed table-responsive, cartfont">
                     <thead>
                         <tr>
                             <th style="width:48%">Product</th>
                             <th style="width:12%">Price</th>
                             <th style="width:10%">Quantity</th>
                             <th style="width:12%">Total Price</th>
-                            <th style="width:16%"></th>
+                            <!-- <th style="width:16%"></th> -->
                         </tr>
                     </thead>
                     <tbody class = "chosenItems">
@@ -36,12 +36,27 @@
             </div>
         </div>
         <div class="row mt-4 d-flex align-items-center">
-            <div class="col-sm-6 order-md-2 text-right">
+            <div class="col-sm-6 order-md-2 text-right, buttonfont">
                 <button id = "Pay" class="btn btn-primary mb-4 btn-lg pl-5 pr-5">Pay</button>
+                <button id = "Clear" class="btn btn-primary mb-4 btn-lg pl-5 pr-5, clearcart">Clear Cart</button>
             </div>
         </div>
     </div>
+
+    <div class="tokencontainer">
+          <img class="tokenimg" src="./images/tokenbig1.png" >
+          <div class="cointxt">x</div>
+        </div>
+
+        <div class="backcontainer">
+          <img class="backimg" 
+          onmouseover="this.src='./images/backpressbig.png';"
+          onmouseout="this.src='./images/backbig.png';"
+          onclick="goBack()" 
+          src="./images/backbig.png">
+        </div>
+
     </section>
-    <button id = "Clear">Clear cart</button>
-    <script src="/scripts/displaycart.js"></script>
+    <script src="./scripts/displaycart.js"></script>
+    <script src="./scripts/maincode.js"></script>
   </body>

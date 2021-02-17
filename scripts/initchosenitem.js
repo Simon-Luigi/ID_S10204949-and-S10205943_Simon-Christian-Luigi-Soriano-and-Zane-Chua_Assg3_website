@@ -63,4 +63,8 @@ function DisplayItem(response) {
   $(".itemDesc").html(desc);
   $(".itemImage").attr("src", `${image}`);
   $(".itemImage").attr("alt", `${name}`);
+  $(".cartcontainer").append(`<img id="AddToCart" 
+      onmouseover="this.src='./images/addcartpressbig.png';"
+      onmouseout="this.src='./images/addcartbig.png';"
+      src="./images/addcartbig.png">`);
 }

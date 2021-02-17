@@ -12,7 +12,7 @@
 }
 
 .spacer{
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .spacer2{
@@ -189,4 +189,112 @@ body{
 .shopname{
   width: 50%;
   max-width: 500px;
+}
+
+.chosenitemcontainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+.chosenitemimagecontainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-image: url(./images/border1.png);
+  min-width: 232px;
+  background-size: 100% 100%;
+  height: auto;
+  padding: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  max-width: 400px;
+  max-height: 400px;
+  
+}
+
+.itemImage{
+  min-width: 200px;
+  min-height: 200px;
+  width: 95%;
+  height: auto;
+
+}
+
+.itemInfo{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  font-style: normal;
+  font-family: 'munroregular';
+}
+
+.itemCat{
+  font-size: 150%;
+}
+
+.itemDesc{
+  font-size: 150%;
+}
+
+.itemPrice{
+  font-size: 300%;
+}
+
+.itemName{
+  font-size: 300%;
+}
+
+.backcontainer{
+  position: fixed;
+  top: 6px;
+  left: 5px;
+}
+
+.backimg{
+  width: 100%;
+}
+
+.cartcontainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.carttext{
+  font-size: 90%;
+  font-family: 'munroregular';
+  color: rgb(143, 196, 67);
+}
+
+#AddToCart{
+  width: 96px;
+  height: 78px;
+}
+
+.cartfont{
+  font-family: 'munroregular';
+  color: white;
+  text-align: center;
+}
+
+
+.buttonfont{
+  font-family: 'munroregular';
+  color: white;
+}
+
+.clearcart{
+  background-color: rgb(234, 67, 67);
+  border-color: rgb(234, 67, 67);
+  margin-left: 3%;
 }

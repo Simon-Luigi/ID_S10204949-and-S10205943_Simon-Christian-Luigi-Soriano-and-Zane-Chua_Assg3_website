@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Main page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  </head>
-  <body class="backgroundimage">
-    <audio autoplay loop>
-    <source src="./sounds/OtherworldMysteriousPensiveGameMusicByHeatleyBros.mp3">
-    Your browser does not support the audio element.
-    </audio>
-    <section>
-      <div class="separator"></div>
-      <div class="align">
-        <div class="islandcontainer">
-          <img class ="islandimg" src="./images/island.png">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Main page</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+	 crossorigin="anonymous">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+</head>
+
+<body class="backgroundimage">
+	<audio autoplay loop>
+		<source src="./sounds/OtherworldMysteriousPensiveGameMusicByHeatleyBros.mp3"> Your browser does not support the audio element.
+	</audio>
+	<section>
+		<div class="separator"></div>
+		<div class="align">
+			<div class="islandcontainer">
+				<img class ="islandimg" src="./images/island.png">
 
           <img class="uwuzon" src = "./images/uwuzon1.png" 
           onmouseover="this.src='./images/uwuzon2.png';"
@@ -40,9 +43,18 @@
           onclick = "location.href='./chosenshop.html?shop=souppee'">
         </div>
         <div class="tokencontainer">
-          <img class="tokenimg" src="./images/tokenbig1.png">
+          <img class="tokenimg" src="./images/tokenbig1.png" >
           <div class="cointxt">x</div>
         </div>
+
+        <div class="backcontainer">
+          <img class="backimg" 
+          onmouseover="this.src='./images/backpressbig.png';"
+          onmouseout="this.src='./images/backbig.png';"
+          onclick="goBack()" 
+          src="./images/backbig.png">
+        </div>
+
           <br></br>
           
         <button class="cartbtn" onclick = "location.href='./shoppingcart.html'">Go check cart kek</button>

@@ -43,7 +43,7 @@ function InitializeItems(){
 } 
 
 function ClearCart(){
-  for ( var i = 0, len = localStorage.length; i < len; ++i ){
+  for ( var i = 0, len = localStorage.length; i <= len; ++i ){
     var key = JSON.parse(localStorage.getItem(localStorage.key(i)));
     if (key.isItem !== undefined){
       localStorage.removeItem(localStorage.key(i));
