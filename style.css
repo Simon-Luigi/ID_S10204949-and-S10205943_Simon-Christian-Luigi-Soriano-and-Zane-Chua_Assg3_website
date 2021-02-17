@@ -72,6 +72,12 @@ body{
   animation-iteration-count: infinite; */
 }
 
+.cartbtncontainer{
+  position: fixed;
+  top: 90px;
+  right: 5px;
+}
+
 .align {
   display: flex;
   justify-content: center;
@@ -125,14 +131,9 @@ body{
   width: 100%;
 }
 
-.cartbtn{
-  position: fixed;
-  top:5%;
-  right:0;
-}
 .gachabtn{
   position: fixed;
-  top:10%;
+  top:40%;
   right:0;
 }
 
