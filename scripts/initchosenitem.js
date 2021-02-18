@@ -33,7 +33,7 @@ $(document).ready(function () {
         'isItem' : "yes"
         }
         localStorage.setItem(`${response._id}`, JSON.stringify(newItems));
-        console.log("Added 1 more of same item to cart");
+        alert(`Added one more ${oldItem.name} to cart`)
       }
       else {
         var newItem = {
@@ -44,7 +44,7 @@ $(document).ready(function () {
         'isItem': "yes"
       }
       localStorage.setItem(`${response._id}`, JSON.stringify(newItem))
-      console.log("Added item to cart");
+      alert(`Added ${response.item_name} to cart`)
       }
     });
   });
