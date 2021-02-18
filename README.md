@@ -18,7 +18,6 @@ Class: P01<br />
 | Create code to display chosen item | Complete| 13/2/2021|
 | Create shopping cart code | Complete| 15/2/2021|
 | Create gachapon code | Incomplete| -----:|
-| Create gachapon code | Incomplete| -----:|
 
 
 <h2>Design Process</h2>

@@ -4,7 +4,6 @@ $(document).ready(function () {
 
 document.getElementById("Clear").addEventListener("click", function() {
   ClearCart();
-  console.log("success");
 });
 
 
@@ -43,11 +42,12 @@ function InitializeItems(){
 } 
 
 function ClearCart(){
-  for ( var i = 0, len = localStorage.length; i <= len; ++i ){
+  for ( var i = 0; i < localStorage.length; ++i ){
     var key = JSON.parse(localStorage.getItem(localStorage.key(i)));
+    console.log(localStorage.key(i));
     if (key.isItem !== undefined){
       localStorage.removeItem(localStorage.key(i));
-      window.location.reload();
     }
   }
+  window.location.reload();
 }

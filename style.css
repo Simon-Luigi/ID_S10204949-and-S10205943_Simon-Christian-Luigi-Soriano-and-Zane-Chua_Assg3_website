@@ -299,3 +299,8 @@ body{
   border-color: rgb(234, 67, 67);
   margin-left: 3%;
 }
+
+.clearcart:hover{
+  background-color: rgb(157, 41, 45);
+  border-color: rgb(157, 41, 45);
+}
