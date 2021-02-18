@@ -395,13 +395,18 @@ body{
   .gachacontainer{top: 132px;}
   .gachaimg {content: url('./images/gacha.png');}
 
-  .spacer2 {margin-top: 20%;}
+  .spacer2 {margin-top: 30%;}
 
   .spacer {margin-top: 30%;}
 
-  .gachamachineimg {width: 50%;} 
+  .gachamachineimg {width: 80%; height: 80%;} 
 
   .backgroundexpander {height: 300px;}
 
-  .logoimage {width: 60%;}
+  .logoimage {width: 80%; height: auto;}
+
+  .itemcontainer {width: 100%;}
+
+  .shopname{width: 80%;}
+  
 }
