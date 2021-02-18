@@ -13,7 +13,8 @@ function InitializeItems(){
   for ( var i = 0, len = localStorage.length; i < len; ++i ) {
     var key = JSON.parse(localStorage.getItem(localStorage.key(i)));
     var check = localStorage.key(i).includes("inventory");
-    if (localStorage.key(i) !== "Tokens" && check == false){
+    var check2 = localStorage.key(i).includes("Voucher");
+    if (localStorage.key(i) !== "Tokens" && check == false && check2 == false){
       var item_name = key.name;
       var item_qty = key.qty;
       var price = key.price;

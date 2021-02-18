@@ -9,7 +9,7 @@
     <link href="/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body class="backgroundcolor">
-    <audio autoplay loop>
+    <audio id="music" loop>
 		  <source src="./sounds/VideoGameTrapMusicDayDreamByHeatleyBros.mp3"> Your browser does not support the audio element.
 	  </audio>
     <section class="pt-5 pb-5">
@@ -42,6 +42,11 @@
             <div class="col-sm-6 order-md-2 text-right, buttonfont">
                 <button id = "Pay" class="btn btn-primary mb-4 btn-lg pl-5 pr-5">Pay</button>
                 <button id = "Clear" class="btn btn-primary mb-4 btn-lg pl-5 pr-5, clearcart">Clear Cart</button>
+                <div id = "Vouchers">
+                  <p class = "BasicVoucher">x Basic vouchers</p>
+                  <p class = "PremiumVoucher">x Premium vouchers</p>
+                  <p class = "SuperVoucher">x Super vouchers</p>
+                </div>
             </div>
         </div>
     </div>
@@ -62,4 +67,5 @@
     </section>
     <script src="./scripts/displaycart.js"></script>
     <script src="./scripts/maincode.js"></script>
+    <script src="./scripts/music.js"></script>
   </body>

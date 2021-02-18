@@ -50,23 +50,15 @@ function SpinPrize() {
 function AddPrizeToInventory(prize){
   var discount = 0
   if (prize == "Basic Voucher"){
-    discount = Math.random() * (10-5);
+    var voucheramount = localStorage.getItem("VoucherBasic")
+    localStorage.setItem(`VoucherBasic`, voucheramount++);
   }
   else if (prize == "Premium Voucher"){
-    discount = Math.random() * (40-10) + 10;
-  }
+    var voucheramount = localStorage.getItem("VoucherBasic")
+    localStorage.setItem(`VoucherSuper`, voucheramount++);
+  }  
   else{
-    discount = Math.random() * (60-40) + 40;
+    var voucheramount = localStorage.getItem("VoucherBasic")
+    localStorage.setItem(`VoucherSuper`, voucheramount++);
   }
-  for(i = 1; i < 100; i++){
-    var inventory = localStorage.getItem("inventoryno" + `${i}`)
-    if (inventory == null){
-      alert(`inventoryno${i}`);
-      data = {'voucher_name' : `${prize}`,
-      'voucher_disc' : discount}
-      localStorage.setItem(`inventoryno${i}`, JSON.stringify(data));
-      return true;
-    }
-  }
-  return false;
 }
