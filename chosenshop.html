@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Your chosen shop</title>
+	<title>Shop</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
 	 crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
@@ -14,22 +14,25 @@
 </head>
 
 <body class="backgroundcolor">
+
 	<audio id="music" loop>
 		<source src="./sounds/GroceryStoreCalmShopGameMusicbyHeatleyBros.mp3"> Your browser does not support the audio element.
 	</audio>
+
 	<div class="spacer2"><img class="shopname"></div>
     <div class="loadingcontainer">
       <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_ybq8qB.json"  background="transparent"  speed="1"  style="width: 400px; height: auto;"  loop  autoplay></lottie-player>
-      
     </div>
-    
 
     <div class="loadingtxt">Loading</div>
+
     <div class="itemcontainer"></div>
+
     <div class="tokencontainer">
       <img class="tokenimg" src="./images/tokenbig1.png">
       <div class="cointxt">x</div>
     </div>
+
     <div class="cartbtncontainer">
       <img class="cartbtn" 
       onmouseover="this.src='./images/cartpressbig.png';"
@@ -45,7 +48,6 @@
       src="./images/backbig.png">
     </div>
 
-        
     <script src="./scripts/maincode.js"></script>
     <script src="./scripts/initshopdata.js"></script>
     <script src="./scripts/music.js"></script>

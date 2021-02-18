@@ -19,7 +19,7 @@ function GachaSystem(tokens){
         tokens -= 50;
         $("i").html(`${tokens}`);
         localStorage.setItem("Tokens", tokens);
-        prize = SpinPrize();
+        var prize = SpinPrize();
         check = AddPrizeToInventory(prize);
         if (check == false){
           tokens += 50

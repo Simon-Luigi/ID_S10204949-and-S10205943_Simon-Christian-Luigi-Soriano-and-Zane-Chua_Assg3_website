@@ -65,33 +65,34 @@ function InitializeVouchers(){
   var voucherList = [["Basic", basicVoucher], ["Premium", premiumVoucher], ["Super", superVoucher]]
   for (var i = 0; i < voucherList.length; i++){
     if (voucherList[i][1] !== 0){
-      voucherData = `<div><p>${voucherList[i][1]} ${voucherList[i][0]} Voucher(s)</p>` + `<label><input type = "checkbox" class = "applyVoucher" value = "${voucherList[i][0]}" name = "applyVoucher" onclick = "ChangeValues()"/>Select to apply voucher</label></div>`
+      voucherData = `<div style="color: rgb(234, 67, 67);">${voucherList[i][1]} ${voucherList[i][0]} Voucher(s)` + `<div><label style="color: white;"><input type = "checkbox" class = "applyVoucher" value = "${voucherList[i][0]}" name = "applyVoucher" onclick = "ChangeValues()"/> Select to apply voucher</label></div></div><br></br>`
       $("#Voucher").append(voucherData);
     }
   }
 }
 
 function ChangeValues(){
-  $("input:checkbox").on('click', function() {
-    var $box = $(this);
-    if ($box.is(":checked")) {
-      var group = "input:checkbox[name='" + $box.attr("name") + "']";
-      $(group).prop("checked", false);
-      $box.prop("checked", true);
-    } else {
-      $box.prop("checked", false);
+  $('input:checkbox').on('change', function() {
+    $('input:checkbox').not(this).prop('checked', false); 
+    var checkedValue = $('.applyVoucher:checked').val();
+    if (checkedValue !== undefined){
+      DisplayDiscountedPaymentInfo(checkedValue)
     }
-    });
-  var checkedValue = $('.applyVoucher:checked').val();
-  if (checkedValue !== undefined){
-    DisplayDiscountedPaymentInfo(checkedValue)
-  }
-  else{
-    DisplayPaymentInfo();
-  }
+    else{
+      DisplayPaymentInfo();
+    }
+});
+  /*// $("input:checkbox").on('click', function() {
+  //   var $box = $(this);
+  //   if ($box.is(":checked")) {
+  //     var group = "input:checkbox[name='" + $box.attr("name") + "']";
+  //     $(group).prop("checked", false);
+  //     $box.prop("checked", false);
+  //   } else {
+  //     $box.prop("checked", false);
+  //   }
+  //   });*/
 }
-
-
 
 function DisplayDiscountedPaymentInfo(checkedValue){
   var discount = checkedValue;

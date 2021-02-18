@@ -22,6 +22,10 @@
   margin-bottom: 3%;
 }
 
+.spacer3{
+  margin-top: 5%;
+}
+
 body{
 
   height: 100%;
@@ -92,12 +96,38 @@ body{
   cursor: pointer;
 }
 
+.gachatxtcontainer{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.gachanameimg{
+  width: 50%;
+  max-width: 500px;
+}
+
 .gachamachineimg{
-  display: block;
+  cursor: pointer;
+  position: relative;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
-  max-width: 684px;
+  width: 30%;
+}
+
+.gachatxt1{
+  font-family: 'munroregular';
+  color: white;
+  font-size: 180%;
+  text-align: center;
+}
+
+.gachatxt1highlight{
+  color: rgb(234, 67, 67);
+}
+
+.gachatxt1 > i{
+  color: rgb(4, 106, 175);
 }
 
 .align {
@@ -343,4 +373,31 @@ body{
 .clearcart:hover{
   background-color: rgb(157, 41, 45);
   border-color: rgb(157, 41, 45);
+}
+
+@media screen and (max-width: 480px) {
+
+  .backgroundcolor {background-color: rgb(31,31,31);}
+
+  .backimg {content: url('./images/back.png');}
+
+  .tokenimg {content: url('./images/token1.png');}
+
+  .cointxt {font-size: 200%;}
+
+  .cartbtncontainer{top: 63px;}
+  .cartbtn {content: url('./images/cart.png');}
+
+  .gachacontainer{top: 132px;}
+  .gachaimg {content: url('./images/gacha.png');}
+
+  .spacer2 {margin-top: 20%;}
+
+  .spacer {margin-top: 30%;}
+
+  .gachamachineimg {width: 50%;} 
+
+  .backgroundexpander {height: 300px;}
+
+  .logoimage {width: 60%;}
 }

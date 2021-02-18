@@ -3,66 +3,69 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Your shopping cart</title>
+    <title>Cart</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body class="backgroundcolor">
+
     <audio id="music" loop>
 		  <source src="./sounds/VideoGameTrapMusicDayDreamByHeatleyBros.mp3"> Your browser does not support the audio element.
 	  </audio>
+
     <section class="pt-5 pb-5">
+
       <div class="container">
+
         <div class="row w-100">
-            <div class="col-lg-12 col-md-12 col-12, cartfont">
-                <h3 class="display-5 mb-2 text-center">Shopping Cart</h3>
-                <p class="mb-5 text-center">
-                    <i class="totalItems text-info font-weight-bold">X</i> items in your cart</p>
-                <table id="shoppingCart" class="table table-condensed table-responsive, cartfont">
-                    <thead>
-                        <tr>
-                            <th style="width:48%">Product</th>
-                            <th style="width:12%">Price</th>
-                            <th style="width:10%">Quantity</th>
-                            <th style="width:12%">Total Price</th>
-                            <!-- <th style="width:16%"></th> -->
-                        </tr>
-                    </thead>
-                    <tbody class = "chosenItems">
-                    </tbody>
-                </table>
-                <div class="float-right text-right">
-                    <h3 class = "subtotalText">Subtotal:</h4>
-                    <h2 class = "total-price">$X</h1>
-                </div>
+
+          <div class="col-lg-12 col-md-12 col-12, cartfont">
+
+            <h3 class="display-5 mb-2 text-center">Shopping Cart</h3>
+            <p class="mb-5 text-center"><i class="totalItems text-info font-weight-bold">X</i> items in your cart</p>
+            <table id="shoppingCart" class="table table-condensed table-responsive, cartfont">
+              <thead>
+                <tr>
+                    <th style="width:48%">Product</th>
+                    <th style="width:12%">Price</th>
+                    <th style="width:10%">Quantity</th>
+                    <th style="width:12%">Total Price</th>
+                </tr>
+              </thead>
+              <tbody class = "chosenItems"></tbody>
+            </table>
+            <div class="float-right text-right">
+              <h3 class = "subtotalText">Subtotal:</h4>
+              <h2 class = "total-price">$X</h1>
             </div>
+          </div>
         </div>
+        
         <div class="row mt-4 d-flex align-items-center">
             <div class="col-sm-6 order-md-2 text-right, buttonfont">
-                <button id = "Clear" class="btn btn-primary mb-4 btn-lg pl-5 pr-5, clearcart">Clear Cart</button>
-                <div id = "Voucher">
-                </div>
+                <div id = "Voucher"></div>
                 <button id = "Pay" class="btn btn-primary mb-4 btn-lg pl-5 pr-5" onclick = "Pay()">Pay</button>
+                <button id = "Clear" class="btn btn-primary mb-4 btn-lg pl-5 pr-5, clearcart">Clear Cart</button>           
             </div>
         </div>
     </div>
 
     <div class="tokencontainer">
-          <img class="tokenimg" src="./images/tokenbig1.png" >
-          <div class="cointxt">x</div>
-        </div>
+      <img class="tokenimg" src="./images/tokenbig1.png" >
+      <div class="cointxt">x</div>
+    </div>
 
-        <div class="backcontainer">
-          <img class="backimg" 
-          onmouseover="this.src='./images/backpressbig.png';"
-          onmouseout="this.src='./images/backbig.png';"
-          onclick="goBack()" 
-          src="./images/backbig.png">
-        </div>
+    <div class="backcontainer">
+      <img class="backimg" 
+      onmouseover="this.src='./images/backpressbig.png';"
+      onmouseout="this.src='./images/backbig.png';"
+      onclick="goBack()" 
+      src="./images/backbig.png">
+    </div>
 
     </section>
-    <button onclick = "test()">reset</button>
+    <!-- <button onclick = "test()">reset</button> -->
     <script src="./scripts/displaycart.js"></script>
     <script src="./scripts/maincode.js"></script>
     <script src="./scripts/music.js"></script>
