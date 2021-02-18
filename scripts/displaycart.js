@@ -1,7 +1,7 @@
 $(document).ready(function () {
   InitializeItems();
   InitializeVouchers();
-  ClickToApply();
+  DisplayPaymentInfo();
 })
 
 document.getElementById("Clear").addEventListener("click", function() {
@@ -10,8 +10,6 @@ document.getElementById("Clear").addEventListener("click", function() {
 
 
 function InitializeItems(){
-  var subtotal = 0;
-  var total_items = 0;
   for ( var i = 0, len = localStorage.length; i < len; ++i ) {
     var key = JSON.parse(localStorage.getItem(localStorage.key(i)));
     var check = localStorage.key(i).includes("inventory");
@@ -21,28 +19,31 @@ function InitializeItems(){
       var item_qty = key.qty;
       var price = key.price;
       var total_price = item_qty * key.price;
-      total_items += item_qty;
-      subtotal += total_price;
       item = "<tr> + <td data-th = 'Product'> <div class = 'row'> <div class='col-md-6 text-left mt-sm-2'>" + `<h4>${item_name}</h4> </div> </div> </td> <td data-th = "Price">${price}</td> <td data-th = "Quantity">${item_qty}</td> <td data-th = "Total-Price">${total_price}</td> </tr>`;
       $(".chosenItems").append(item);
     }
   }
-  document.getElementById("Pay").addEventListener("click", function() {
-    if (subtotal == 0){
-      alert("Error! No items in cart!")
+} 
+
+function DisplayPaymentInfo(){
+  var subtotal = 0;
+  var total_items = 0;
+  for ( var i = 0, len = localStorage.length; i < len; ++i ) {
+    var key = JSON.parse(localStorage.getItem(localStorage.key(i)));
+    var check = localStorage.key(i).includes("inventory");
+    var check2 = localStorage.key(i).includes("Voucher");
+    if (localStorage.key(i) !== "Tokens" && check == false && check2 == false){
+      var item_qty = key.qty;
+      var price = key.price;
+      var total_price = item_qty * key.price;
+      total_items += item_qty;
+      subtotal += total_price;
     }
-    else{
-      var tokens = parseInt(localStorage.getItem("Tokens"));
-      var earnedtokens  = Math.floor(subtotal);
-      var totaltokens = earnedtokens + tokens;
-      localStorage.setItem("Tokens", totaltokens);
-      alert(`Successfully paid. Received ${earnedtokens} tokens. Total tokens = ${totaltokens}`);
-      ClearCart();
-    }
-  });
+  }
   $("i").html(`${total_items}`)
   $(".total-price").html(`$${subtotal}`)
-} 
+  $(".subtotalText").html("Subtotal:")
+}
 
 function ClearCart(){
   for ( var i = 0; i < localStorage.length; ++i ){
@@ -64,32 +65,122 @@ function InitializeVouchers(){
   var voucherList = [["Basic", basicVoucher], ["Premium", premiumVoucher], ["Super", superVoucher]]
   for (var i = 0; i < voucherList.length; i++){
     if (voucherList[i][1] !== 0){
-      voucherData = `<div><p>${voucherList[i][1]} ${voucherList[i][0]} Voucher(s)</p>` + `<label><input type = "checkbox" class = radio value = "${voucherList[i][0]}" name = "applyVoucher"/>Select to apply voucher</label></div>`
+      voucherData = `<div><p>${voucherList[i][1]} ${voucherList[i][0]} Voucher(s)</p>` + `<label><input type = "checkbox" class = "applyVoucher" value = "${voucherList[i][0]}" name = "applyVoucher" onclick = "ChangeValues()"/>Select to apply voucher</label></div>`
       $("#Voucher").append(voucherData);
     }
   }
 }
 
-function ClickToApply(){
+function ChangeValues(){
   $("input:checkbox").on('click', function() {
-  // in the handler, 'this' refers to the box clicked on
     var $box = $(this);
     if ($box.is(":checked")) {
-      // the name of the box is retrieved using the .attr() method
-      // as it is assumed and expected to be immutable
       var group = "input:checkbox[name='" + $box.attr("name") + "']";
-      // the checked state of the group/box on the other hand will change
-      // and the current value is retrieved using .prop() method
       $(group).prop("checked", false);
       $box.prop("checked", true);
     } else {
       $box.prop("checked", false);
     }
     });
-  check = $("checkbox:checked").val()
-  if (check !== undefined){
-    check.addEventListener('change', function() {
-    console.log(check);
-  });
-  } 
+  var checkedValue = $('.applyVoucher:checked').val();
+  if (checkedValue !== undefined){
+    DisplayDiscountedPaymentInfo(checkedValue)
+  }
+  else{
+    DisplayPaymentInfo();
+  }
+}
+
+
+
+function DisplayDiscountedPaymentInfo(checkedValue){
+  var discount = checkedValue;
+  var subtotal = 0;
+  var total_items = 0;
+  for ( var i = 0, len = localStorage.length; i < len; ++i ) {
+    var key = JSON.parse(localStorage.getItem(localStorage.key(i)));
+    var check = localStorage.key(i).includes("inventory");
+    var check2 = localStorage.key(i).includes("Voucher");
+    if (localStorage.key(i) !== "Tokens" && check == false && check2 == false){
+      var item_qty = key.qty;
+      var price = key.price;
+      var total_price = item_qty * key.price;
+      total_items += item_qty;
+      subtotal += total_price;
+    }
+  }
+  $("i").html(`${total_items}`)
+  if (discount == "Basic"){
+    savings = round(subtotal * 0.1);
+    subtotal = round(subtotal * 0.9);
+    $(".total-price").html(`$${subtotal}`);
+    $(".subtotalText").html(`Subtotal (basic voucher applied), saving you $${savings}:`);
+  }
+  else if (discount == "Premium"){
+    savings = round(subtotal * 0.3);
+    subtotal = round(subtotal * 0.7);
+    $(".total-price").html(`$${subtotal}`);
+    $(".subtotalText").html(`Subtotal (premium voucher applied), saving you $${savings}:`);
+  }
+  else{
+    subtotal = round(subtotal * 0.5);
+    $(".total-price").html(`$${subtotal}`);
+    $(".subtotalText").html(`Subtotal (super voucher applied, saving you $${subtotal}:`)
+  }
+}
+
+function Pay(){
+  var subtotalraw = $(".total-price").html();
+  var subtotal = subtotalraw.substring(1);
+  console.log(subtotal);
+  if (subtotal == 0){
+    alert("Error! No items in cart!")
+  }
+  else{
+    var checkVoucher = $('.applyVoucher:checked').val();
+    if (checkVoucher == undefined){
+      console.log("No Voucher")
+      AddTokens(subtotal); //no voucher used
+    }
+    else{
+      console.log("Have Voucher")
+      if (checkVoucher == "Basic"){
+        var voucheramount = localStorage.getItem("VoucherBasic");
+        var newAmount = parseInt(voucheramount) - 1;
+        localStorage.setItem(`VoucherBasic`, newAmount);
+
+      }
+      else if (checkVoucher == "Premium"){
+        var voucheramount = localStorage.getItem("VoucherPremium");
+        var newAmount = parseInt(voucheramount) - 1;
+        localStorage.setItem(`VoucherPremium`, newAmount);
+      }  
+      else{
+        var voucheramount = localStorage.getItem("VoucherSuper");
+        var newAmount = parseInt(voucheramount) - 1;
+        localStorage.setItem(`VoucherSuper`, newAmount);
+      }
+      AddTokens(subtotal);
+    }
+  }
+}
+
+function AddTokens(subtotal){
+  var tokens = parseInt(localStorage.getItem("Tokens"));
+  var earnedtokens  = Math.floor(subtotal);
+  var totaltokens = earnedtokens + tokens;
+  localStorage.setItem("Tokens", totaltokens);
+  alert(`Successfully paid. Received ${earnedtokens} tokens. Total tokens = ${totaltokens}`);
+  ClearCart();
+}
+
+function test(){
+    localStorage.setItem("Tokens", 0);
+    localStorage.setItem("VoucherBasic", 0);
+    localStorage.setItem("VoucherPremium", 0);
+    localStorage.setItem("VoucherSuper", 0);
+}
+
+function round(num) {    
+    return +(Math.round(num + "e+2")  + "e-2");
 }

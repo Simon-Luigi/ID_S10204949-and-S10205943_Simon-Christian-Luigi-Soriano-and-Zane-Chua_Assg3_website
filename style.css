@@ -82,6 +82,24 @@ body{
   cursor: pointer;
 }
 
+.gachacontainer{
+  position: fixed;
+  top: 192px;
+  right: 5px;
+}
+
+.gachaimg{
+  cursor: pointer;
+}
+
+.gachamachineimg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  max-width: 684px;
+}
+
 .align {
   display: flex;
   justify-content: center;
@@ -139,16 +157,10 @@ body{
   width: 100%;
 }
 
-.gachabtn{
-  position: fixed;
-  top:40%;
-  right:0;
-}
-
 .cointxt{
   position: absolute;
   top: 10%;
-  right: 55%;
+  right: 8%;
   color: white;
   font-size: 280%;
   font-style: normal;
