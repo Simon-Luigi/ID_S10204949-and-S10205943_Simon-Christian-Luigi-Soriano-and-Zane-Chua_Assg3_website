@@ -48,17 +48,20 @@ function SpinPrize() {
 }
 
 function AddPrizeToInventory(prize){
-  var discount = 0
   if (prize == "Basic Voucher"){
-    var voucheramount = localStorage.getItem("VoucherBasic")
-    localStorage.setItem(`VoucherBasic`, voucheramount++);
+    var voucheramount = localStorage.getItem("VoucherBasic");
+    var newAmount = parseInt(voucheramount) + 1;
+    localStorage.setItem(`VoucherBasic`, newAmount);
+
   }
   else if (prize == "Premium Voucher"){
-    var voucheramount = localStorage.getItem("VoucherBasic")
-    localStorage.setItem(`VoucherSuper`, voucheramount++);
+    var voucheramount = localStorage.getItem("VoucherPremium");
+    var newAmount = parseInt(voucheramount) + 1;
+    localStorage.setItem(`VoucherPremium`, newAmount);
   }  
   else{
-    var voucheramount = localStorage.getItem("VoucherBasic")
-    localStorage.setItem(`VoucherSuper`, voucheramount++);
+    var voucheramount = localStorage.getItem("VoucherSuper");
+    var newAmount = parseInt(voucheramount) + 1;
+    localStorage.setItem(`VoucherSuper`, newAmount);
   }
 }

@@ -67,4 +67,9 @@ function DisplayItem(response) {
       onmouseover="this.src='./images/addcartpressbig.png';"
       onmouseout="this.src='./images/addcartbig.png';"
       src="./images/addcartbig.png">`);
+
+  $(".carttext").html("Add To Cart");
+  $(".loadingcontainer").hide();
+  $(".loadingtxt").hide();
+  $(".loadingspacer").hide();
 }

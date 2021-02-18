@@ -1,5 +1,7 @@
 $(document).ready(function () {
   InitializeItems();
+  InitializeVouchers();
+  ClickToApply();
 })
 
 document.getElementById("Clear").addEventListener("click", function() {
@@ -51,4 +53,43 @@ function ClearCart(){
     }
   }
   window.location.reload();
+}
+
+
+function InitializeVouchers(){
+  var basicVoucher = parseInt(localStorage.getItem("VoucherBasic"));
+  var premiumVoucher = parseInt(localStorage.getItem("VoucherPremium"));
+  var superVoucher = parseInt(localStorage.getItem("VoucherSuper"));
+  
+  var voucherList = [["Basic", basicVoucher], ["Premium", premiumVoucher], ["Super", superVoucher]]
+  for (var i = 0; i < voucherList.length; i++){
+    if (voucherList[i][1] !== 0){
+      voucherData = `<div><p>${voucherList[i][1]} ${voucherList[i][0]} Voucher(s)</p>` + `<label><input type = "checkbox" class = radio value = "${voucherList[i][0]}" name = "applyVoucher"/>Select to apply voucher</label></div>`
+      $("#Voucher").append(voucherData);
+    }
+  }
+}
+
+function ClickToApply(){
+  $("input:checkbox").on('click', function() {
+  // in the handler, 'this' refers to the box clicked on
+    var $box = $(this);
+    if ($box.is(":checked")) {
+      // the name of the box is retrieved using the .attr() method
+      // as it is assumed and expected to be immutable
+      var group = "input:checkbox[name='" + $box.attr("name") + "']";
+      // the checked state of the group/box on the other hand will change
+      // and the current value is retrieved using .prop() method
+      $(group).prop("checked", false);
+      $box.prop("checked", true);
+    } else {
+      $box.prop("checked", false);
+    }
+    });
+  check = $("checkbox:checked").val()
+  if (check !== undefined){
+    check.addEventListener('change', function() {
+    console.log(check);
+  });
+  } 
 }

@@ -78,6 +78,10 @@ body{
   right: 5px;
 }
 
+.cartbtn{
+  cursor: pointer;
+}
+
 .align {
   display: flex;
   justify-content: center;
@@ -91,6 +95,7 @@ body{
 
 
 .uwuzon{
+  cursor: pointer;
   position: absolute;
   top: -3%;
   left: 40%;
@@ -100,6 +105,7 @@ body{
 
 
 .ladzada{
+  cursor: pointer;
   position: absolute;
   top: 16%;
   left: 69%;
@@ -108,6 +114,7 @@ body{
 }
 
 .abay{
+  cursor: pointer;
   position: absolute;
   top: 14%;
   left: 12%;
@@ -115,6 +122,7 @@ body{
   height: auto;
 }
 .souppee{
+  cursor: pointer;
   position: absolute;
   top: 25.5%;
   left: 40%;
@@ -162,6 +170,7 @@ body{
 
 
 .itemcontainer > div {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   background-image: url(./images/border1.png);
@@ -177,6 +186,23 @@ body{
 
 .itemcontainer > div:hover {
   background-image: url(./images/border2.png);
+}
+
+.loadingspacer{
+  margin-top: 60%;
+}
+
+.loadingcontainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.loadingtxt{
+  font-size: 300%;
+  font-family: 'munroregular';
+  color: rgb(4, 106, 175);
+  text-align: center;
 }
 
 .itemimg{
@@ -259,10 +285,12 @@ body{
 }
 
 .backimg{
+  cursor: pointer;
   width: 100%;
 }
 
 .cartcontainer{
+  cursor: pointer;
   display: flex;
   justify-content: center;
   flex-direction: column;

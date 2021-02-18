@@ -113,6 +113,8 @@ function InitData(response){
   }
   var uniqueCategories = categories.filter((v, i, a) => a.indexOf(v) === i);
   console.log(uniqueCategories)
+  $(".loadingcontainer").hide();
+  $(".loadingtxt").hide();
 
 }
 

@@ -23,17 +23,21 @@
 		<div class="spacer"></div>
 
 		<div class="itemInfo">
-			<h3 class="itemName">Item Name</h3>
-			<div class="chosenitemimagecontainer">
-				<img class = "itemImage" src = "blank" alt = "blank"/>
-      </div>
-      <p class = "itemCat">Item Category</p>
-      <p class = "itemPrice">Item Price</p>
-      <p class = "itemDesc">Item Description</p> 
-      
+			<h3 class="itemName"></h3>
+      <h3 class="loadingtxt">Loading</h3>
+			  <div class="chosenitemimagecontainer">
+          <div class="loadingspacer"></div>
+          <div class="loadingcontainer">
+            <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_ybq8qB.json"  background="transparent"  speed="1"  style="width: 400px; height: auto;"  loop  autoplay></lottie-player>
+          </div>
+				  <img class = "itemImage" src = "" alt = ""/>
+        </div>
+      <p class = "itemCat"></p>
+      <p class = "itemPrice"></p>
+      <p class = "itemDesc"></p> 
     </div>
     <!-- <button id = "AddToCart">Add to cart?</button> -->
-    <div class="carttext">Add To Cart</div> 
+    <div class="carttext"></div> 
     <div class="cartcontainer">
       <!-- <img id="AddToCart" 
       onmouseover="this.src='./images/addcartpressbig.png';"
@@ -63,4 +67,5 @@
     <script src="./scripts/maincode.js"></script>
     <script src="./scripts/initchosenitem.js"></script>
     <script src="./scripts/music.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </body>
