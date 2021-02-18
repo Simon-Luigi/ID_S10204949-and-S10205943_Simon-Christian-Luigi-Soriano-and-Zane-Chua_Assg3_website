@@ -375,6 +375,10 @@ body{
   border-color: rgb(157, 41, 45);
 }
 
+.total-price{
+  color: rgb(13, 202, 240);
+}
+
 @media screen and (max-width: 480px) {
 
   .backgroundcolor {background-color: rgb(31,31,31);}

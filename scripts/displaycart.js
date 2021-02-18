@@ -115,18 +115,18 @@ function DisplayDiscountedPaymentInfo(checkedValue){
     savings = round(subtotal * 0.1);
     subtotal = round(subtotal * 0.9);
     $(".total-price").html(`$${subtotal}`);
-    $(".subtotalText").html(`Subtotal (basic voucher applied), saving you $${savings}:`);
+    $(".subtotalText").html(`Subtotal (Basic Voucher applied), saving you $${savings}:`);
   }
   else if (discount == "Premium"){
     savings = round(subtotal * 0.3);
     subtotal = round(subtotal * 0.7);
     $(".total-price").html(`$${subtotal}`);
-    $(".subtotalText").html(`Subtotal (premium voucher applied), saving you $${savings}:`);
+    $(".subtotalText").html(`Subtotal (Premium Voucher applied), saving you $${savings}:`);
   }
   else{
     subtotal = round(subtotal * 0.5);
     $(".total-price").html(`$${subtotal}`);
-    $(".subtotalText").html(`Subtotal (super voucher applied, saving you $${subtotal}:`)
+    $(".subtotalText").html(`Subtotal (Super Voucher applied, saving you $${subtotal}:`)
   }
 }
 
