@@ -1,13 +1,21 @@
 <h1>Shoptopia</h1>
 <h2>Project Details</h2>
-Group name : Hardstuck 3.5 GPA<br>
+
+
+Group name : Hardstuck 3.5 GPA
+
+
 
 | Member id| Name          | Student ID | Role |
 | -------- |:-------------:| -----:| -----:|
 | 1        | Simon Christian Luigi Soriano| S10204949| Back-end developer|
 | 2        | Zane Chua | S10205943| Front-end developer|
 
-Class: P01<br>
+
+
+Class: P01
+
+
 
 <h2>Task details</h2>
   
@@ -23,10 +31,10 @@ Class: P01<br>
 
 
 <h2>Design Process</h2>
-We created the website with the intention of making a "gamified" e-commerce system to attract potential online shoppers and give them a unique shopping experience. By gathering data from many different online stores, this website also serves as a one-stop place for users to shop from various online shopping websites through the use of this website alone, making shopping more convenient for users. With a "gamified" yet friendly user interface system, users will be relieved to find out how easily they can navigate through the website. This website also features a Japanese vending machine system, or Gachapon, which allows users to spend their tokens which they can earn from purchasing anything using this third-party website to earn vouchers which can be used for future purchases.
-<h1></h1>
-Before creating this website, we had to think of a website design that would be suitable to users as we want to make the process from the start, which is the landing page of the website, to finish when they make their purchase. We also had to think of a theme that would be visually pleasing towards most users. We were then struck with inspiration from a mobile game that both Zane and Simon have played, which is Guardian Tales. Guardian Tales is a pixel mobile game with beautiful graphics and user interface, and we have received inspiration from its home page when a user enters the game, which is a floating-island that is sprung with greenery and various rustic buildings that fits its medieval theme. Thus, we decided to create a floating island that holds various shopping sites and this will give users a positive feeling when viewing the sky island. 
-<h1></h1>
+We created the website with the intention of making a "gamified" e-commerce system to attract potential online shoppers and give them a unique shopping experience. By gathering data from many different online stores, this website also serves as a one-stop place for users to shop from various online shopping websites through the use of this website alone, making shopping more convenient for users. With a "gamified" yet friendly user interface system, users will be relieved to find out how easily they can navigate through the website. This website also features a Japanese vending machine system, or Gachapon, which allows users to spend their tokens which they can earn from purchasing anything using this third-party website to earn vouchers which can be used for future purchases.\
+
+Before creating this website, we had to think of a website design that would be suitable to users as we want to make the process from the start, which is the landing page of the website, to finish when they make their purchase. We also had to think of a theme that would be visually pleasing towards most users. We were then struck with inspiration from a mobile game that both Zane and Simon have played, which is Guardian Tales. Guardian Tales is a pixel mobile game with beautiful graphics and user interface, and we have received inspiration from its home page when a user enters the game, which is a floating-island that is sprung with greenery and various rustic buildings that fits its medieval theme. Thus, we decided to create a floating island that holds various shopping sites and this will give users a positive feeling when viewing the sky island.\
+
 Further gathering inspiration from guardian tales, we decided to make the theme of the website to be a pixel-like fantasy where it gives users a feeling of playing a pixel fantasy game. We decided to create 4 mock online shop databases and painstakingly filled it with data of our own using RestDb to store and retrieve data from it. By doing so, it allows us to give users an idea of what our website is capable of doing, which is to collaborate with the many e-commerce websites using their API. All of our designs are original, from the icon of the website when users first enter it, to the logos of the mock shops that we have created. This is what we have decided to do as it helps fit our theme of a pixel-like e-commerce website.
 
 <h2>Features</h2>
