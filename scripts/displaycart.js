@@ -161,7 +161,7 @@ function AddTokens(subtotal){
   var earnedtokens  = Math.floor(subtotal);
   var totaltokens = earnedtokens + tokens;
   localStorage.setItem("Tokens", totaltokens);
-  alert(`Successfully paid ${subtotal}. Received ${earnedtokens} tokens. Total tokens = ${totaltokens}`);
+  alert(`Successfully paid $${subtotal}. Received ${earnedtokens} tokens. Total tokens = ${totaltokens}`);
   ClearCart();
 }
 
