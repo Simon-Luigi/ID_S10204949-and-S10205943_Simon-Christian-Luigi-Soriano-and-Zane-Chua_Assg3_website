@@ -102,7 +102,7 @@ Royalty Free Music By HeatleyBros are used :
 
 * Github Repository: https://github.com/Simon-Luigi/ID_S10204949-and-S10205943_Simon-Christian-Luigi-Soriano-and-Zane-Chua_Assg3_website
 * Github Website: https://simon-luigi.github.io/ID_S10204949-and-S10205943_Simon-Christian-Luigi-Soriano-and-Zane-Chua_Assg3_website/
-
+* Proposal Video: https://drive.google.com/file/d/1DleKagR6RV6XBuve4oNKRtezOg1HTvec/view
  
 
 <h2>Acknowledgements</h2>
