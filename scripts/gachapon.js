@@ -12,7 +12,7 @@ function Popup() {
 
 function GachaSystem(tokens){
     document.getElementById("Spin").addEventListener("click", function() {
-      if (tokens == 0){
+      if (tokens < 50){
         alert("No tokens to spin");
       }
       else{
