@@ -61,8 +61,8 @@
 
 @media screen and (max-width: 480px) {
   .popup .popuptext {
-    left: -800%;
+    left: -300%;
     font-size: 50%;
-    width: 300px;
+    width: 80px;
   }
 }

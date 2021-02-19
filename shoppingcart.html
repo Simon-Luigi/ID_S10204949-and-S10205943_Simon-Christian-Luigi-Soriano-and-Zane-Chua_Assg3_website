@@ -10,10 +10,12 @@
   </head>
   <body class="backgroundcolor">
 
+    <!-- Music -->
     <audio id="music" loop>
 		  <source src="./sounds/VideoGameTrapMusicDayDreamByHeatleyBros.mp3"> Your browser does not support the audio element.
 	  </audio>
 
+    <!-- Bootstrap -->
     <section class="pt-5 pb-5">
 
       <div class="container">
@@ -21,9 +23,12 @@
         <div class="row w-100">
 
           <div class="col-lg-12 col-md-12 col-12, cartfont">
-
+            
+            <!-- Header -->
             <h3 class="display-5 mb-2 text-center">Shopping Cart</h3>
             <p class="mb-5 text-center"><i class="totalItems text-info font-weight-bold">X</i> items in your cart</p>
+
+            <!-- Table For Items In Cart -->
             <table id="shoppingCart" class="table table-condensed table-responsive, cartfont">
               <thead>
                 <tr>
@@ -35,15 +40,19 @@
               </thead>
               <tbody class = "chosenItems"></tbody>
             </table>
+
+            <!-- Subtotal Display -->
             <div class="float-right text-right">
-              <h3 class = "subtotalText">Subtotal:</h4>
-              <h2 class = "total-price">$X</h1>
+              <h3 class = "subtotalText">Subtotal:</h3>
+              <h2 class = "total-price">$X</h2>
             </div>
           </div>
         </div>
         
         <div class="row mt-4 d-flex align-items-center">
             <div class="col-sm-6 order-md-2 text-right, buttonfont">
+
+                <!-- Pay / Clear / Voucher Option -->
                 <div id = "Voucher"></div>
                 <button id = "Pay" class="btn btn-primary mb-4 btn-lg pl-5 pr-5" onclick = "Pay()">Pay</button>
                 <button id = "Clear" class="btn btn-primary mb-4 btn-lg pl-5 pr-5, clearcart">Clear Cart</button>           
@@ -51,17 +60,19 @@
         </div>
     </div>
 
+    <!-- Token Display -->
     <div class="tokencontainer">
-      <img class="tokenimg" src="./images/tokenbig1.png" >
+      <img class="tokenimg" src="./images/tokenbig1.png" alt="Token Display">
       <div class="cointxt">x</div>
     </div>
 
+    <!-- Back Button Display -->
     <div class="backcontainer">
       <img class="backimg" 
       onmouseover="this.src='./images/backpressbig.png';"
       onmouseout="this.src='./images/backbig.png';"
       onclick="goBack()" 
-      src="./images/backbig.png">
+      src="./images/backbig.png" alt="Back Button">
     </div>
 
     </section>

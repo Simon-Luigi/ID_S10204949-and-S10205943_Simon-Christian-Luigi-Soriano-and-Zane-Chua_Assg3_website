@@ -3,6 +3,12 @@
   50% {height: 14em;}
   100% {height: 10em;}
 }
+
+@keyframes floats{
+  0% {height: 10em;}
+  50% {height: 14em;}
+  100% {height: 10em;}
+}
 @font-face {
     font-family: 'munroregular';
     src: url('./fonts/munro-webfont.woff2') format('woff2'),
@@ -36,6 +42,7 @@ body{
 }
 
 .backgroundimage{
+  background-color: rgb(96, 181, 236);
   background-image: url(./images/skybg.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -137,6 +144,12 @@ body{
 
 .separator{
   animation-name: float;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.separator2{
+  animation-name: floats;
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
@@ -379,8 +392,12 @@ body{
   color: rgb(13, 202, 240);
 }
 
+#shoppingCart{
+  color: white;
+}
+
 @media screen and (max-width: 480px) {
-  @keyframes float{
+  @keyframes floats{
   0% {height: 2em;}
   50% {height: 5em;}
   100% {height: 2em;}
@@ -413,5 +430,7 @@ body{
   .itemcontainer {width: 100%;}
 
   .shopname{width: 80%;}
-  
+
+  .gachanameimg {width: 80%;}
+
 }

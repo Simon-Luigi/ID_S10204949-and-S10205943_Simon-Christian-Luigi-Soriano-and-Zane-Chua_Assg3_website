@@ -15,37 +15,45 @@
 
 <body class="backgroundcolor">
 
+  <!-- Music -->
 	<audio id="music" loop>
 		<source src="./sounds/GroceryStoreCalmShopGameMusicbyHeatleyBros.mp3"> Your browser does not support the audio element.
 	</audio>
 
-	<div class="spacer2"><img class="shopname"></div>
+  <!-- Spacer + Shop Header -->
+	<div class="spacer2"><img class="shopname" src="./images/empty.png" alt="Shop Name"></div>
+
+    <!-- Lottie Loading Container -->
     <div class="loadingcontainer">
       <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_ybq8qB.json"  background="transparent"  speed="1"  style="width: 400px; height: auto;"  loop  autoplay></lottie-player>
     </div>
 
     <div class="loadingtxt">Loading</div>
 
+    <!-- Item Container  -->
     <div class="itemcontainer"></div>
 
+    <!-- Token Display -->
     <div class="tokencontainer">
-      <img class="tokenimg" src="./images/tokenbig1.png">
+      <img class="tokenimg" src="./images/tokenbig1.png" alt="Token Display">
       <div class="cointxt">x</div>
     </div>
 
+    <!-- Cart Button Display -->
     <div class="cartbtncontainer">
       <img class="cartbtn" 
       onmouseover="this.src='./images/cartpressbig.png';"
-      onmouseout="this.src='./images/cartbig.png'"onclick="location.href='./shoppingcart.html'"
-      src="./images/cartbig.png">
+      onmouseout="this.src='./images/cartbig.png'" onclick="location.href='./shoppingcart.html'"
+      src="./images/cartbig.png" alt="Cart Button">
     </div>
 
+    <!-- Back Button Display -->
     <div class="backcontainer">
       <img class="backimg" 
       onmouseover="this.src='./images/backpressbig.png';"
       onmouseout="this.src='./images/backbig.png';"
       onclick="goBack()" 
-      src="./images/backbig.png">
+      src="./images/backbig.png" alt="Back Button">
     </div>
 
     <script src="./scripts/maincode.js"></script>

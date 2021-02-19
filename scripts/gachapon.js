@@ -18,8 +18,10 @@ function GachaSystem(tokens){
       else{
         tokens -= 50;
         $("i").html(`${tokens}`);
+        $(".cointxt").html(`${tokens}`);
         localStorage.setItem("Tokens", tokens);
         var prize = SpinPrize();
+        alert(`Congrats! You have won a ${prize}`);
         check = AddPrizeToInventory(prize);
         if (check == false){
           tokens += 50

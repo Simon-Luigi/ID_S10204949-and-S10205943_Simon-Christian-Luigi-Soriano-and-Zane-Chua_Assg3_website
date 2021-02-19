@@ -9,57 +9,73 @@
 	 crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 	</script>
-	<link href="./styles/gachastyle.css" rel="stylesheet" type="text/css" />
+	<link href="gachastyle.css" rel="stylesheet" type="text/css" />
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="backgroundcolor">
 
+  <!-- Music -->
   <audio id="music" loop>
 		  <source src="./sounds/VideoGameTrapMusicDayDreamByHeatleyBros.mp3"> Your browser does not support the audio element.
 	</audio>
 
 	<header>
+
+    <!-- Spacer -->
     <div class="spacer"></div>
+
+    <!-- Gacha Name Container -->
     <div class="gachatxtcontainer">
-		<img class="gachanameimg" src="./images/gachaname.png">
+		<img class="gachanameimg" src="./images/gachaname.png" alt="Gacha Name">
     </div>
+
+    <!-- Spacer -->
     <div class="spacer3"></div>
 	</header>
 
 	<section>
-    <div class="gachatxt1">Welcome to the Gacha machine! It costs <div class="gachatxt1highlight">50 tokens</div> for a spin. Win vouchers to save big on your next purchase!</div>
+    <!-- Gacha Text -->
+    <div class="gachatxt1">Welcome to the Gacha Machine! It costs <div class="gachatxt1highlight">50 tokens</div> for a spin. Win vouchers to save big on your next purchase!</div>
 
+    <!-- Gacha Text + Pop Up Text -->
 		<div class="gachatxt1">You currently have <i>x</i> tokens <div class="popup" onclick="Popup()">(?)
-      <span class="popuptext" id="myPopup">Earn tokens by simply purchasing anything using our website! For every $1 spent you earn 1 token. So shop now!</span>
+      <span class="popuptext" id="myPopup">Earn tokens by simply purchasing anything using our website! For every $1 spent you earn 1 token. So shop now!</span></div>
     </div>
 
+    <!-- Spacer -->
     <div class="spacer3"></div>
 
+    <div class="gachatxt1">Click on the Gacha Machine to roll!</div>
+
+    <!-- Gacha Image Container -->
     <div class="gachatxtcontainer">
-      <img id="Spin" class="gachamachineimg" src="./images/gachamachinebig.png">
+      <img id="Spin" class="gachamachineimg" src="./images/gachamachinebig.png" alt="Gacha Machine">
     </div>
 
   </section>
 
+  <!-- Token Display -->
   <div class="tokencontainer">
-    <img class="tokenimg" src="./images/tokenbig1.png" >
+    <img class="tokenimg" src="./images/tokenbig1.png" alt="Token Display">
     <div class="cointxt">x</div>
   </div>
 
+  <!-- Cart Button Display -->
   <div class="cartbtncontainer">
     <img class="cartbtn" 
     onmouseover="this.src='./images/cartpressbig.png';"
-    onmouseout="this.src='./images/cartbig.png';"onclick="location.href='./shoppingcart.html'"
-    src="./images/cartbig.png">
+    onmouseout="this.src='./images/cartbig.png';" onclick="location.href='./shoppingcart.html'"
+    src="./images/cartbig.png" alt="Cart Button">
   </div>
 
+  <!-- Back Button Display -->
   <div class="backcontainer">
     <img class="backimg" 
     onmouseover="this.src='./images/backpressbig.png';"
     onmouseout="this.src='./images/backbig.png';"
     onclick="goBack()" 
-    src="./images/backbig.png">
+    src="./images/backbig.png" alt="Back Button">
   </div>
 
     <script src="./scripts/gachapon.js"></script>
